@@ -17,6 +17,7 @@ import { Label } from "@/components/ui/label";
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [showDebugPanel, setShowDebugPanel] = useState(false);
+  const [showCBInsightsAI, setShowCBInsightsAI] = useState(false);
   const { data: trends, isLoading, error, refetch, isFetching } = useHackerNewsTrends();
 
   const filteredTrends = useMemo(() => {
@@ -88,57 +89,77 @@ const Index = () => {
 
         {/* Trends Section */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-bold text-foreground">Trending Technologies</h3>
-              <span className="text-sm text-muted-foreground">
-                {filteredTrends && trends ? (
-                  searchQuery.trim() ? 
-                    `${filteredTrends.length} of ${trends.length} stories` : 
-                    `${filteredTrends.length} stories`
-                ) : 'Loading...'}
-              </span>
+          <div className="lg:col-span-2 space-y-6">
+            {/* Trending Technologies */}
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-xl font-bold text-foreground">Trending Technologies</h3>
+                <span className="text-sm text-muted-foreground">
+                  {filteredTrends && trends ? (
+                    searchQuery.trim() ? 
+                      `${filteredTrends.length} of ${trends.length} stories` : 
+                      `${filteredTrends.length} stories`
+                  ) : 'Loading...'}
+                </span>
+              </div>
+              
+              {error && (
+                <div className="text-destructive text-center py-8">
+                  Failed to load trends. Please try again.
+                </div>
+              )}
+              
+              {isLoading ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {[...Array(6)].map((_, i) => (
+                    <Skeleton key={i} className="h-48 rounded-lg" />
+                  ))}
+                </div>
+              ) : filteredTrends && filteredTrends.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {filteredTrends.slice(0, 6).map((trend) => (
+                    <TrendCard key={trend.title} {...trend} />
+                  ))}
+                </div>
+              ) : searchQuery.trim() ? (
+                <div className="text-center py-12">
+                  <p className="text-muted-foreground text-lg">No trends found matching "{searchQuery}"</p>
+                  <button 
+                    onClick={() => setSearchQuery("")}
+                    className="mt-4 text-primary hover:underline"
+                  >
+                    Clear search
+                  </button>
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <p className="text-muted-foreground">No trends available</p>
+                </div>
+              )}
             </div>
-            
-            {error && (
-              <div className="text-destructive text-center py-8">
-                Failed to load trends. Please try again.
-              </div>
-            )}
-            
-            {isLoading ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[...Array(6)].map((_, i) => (
-                  <Skeleton key={i} className="h-48 rounded-lg" />
-                ))}
-              </div>
-            ) : filteredTrends && filteredTrends.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {filteredTrends.slice(0, 6).map((trend) => (
-                  <TrendCard key={trend.title} {...trend} />
-                ))}
-              </div>
-            ) : searchQuery.trim() ? (
-              <div className="text-center py-12">
-                <p className="text-muted-foreground text-lg">No trends found matching "{searchQuery}"</p>
-                <button 
-                  onClick={() => setSearchQuery("")}
-                  className="mt-4 text-primary hover:underline"
-                >
-                  Clear search
-                </button>
-              </div>
-            ) : (
-              <div className="text-center py-12">
-                <p className="text-muted-foreground">No trends available</p>
-              </div>
-            )}
+
+            {/* Top Trending - Full Width Below Trending Technologies */}
+            <TopTrendsList />
           </div>
           
-          {/* Sidebar with CB Insights and Top Trending */}
+          {/* Sidebar with CB Insights */}
           <div className="space-y-6">
             <CBITopTrends />
-            <CBInsightsWidget />
+            
+            {/* CB Insights AI Toggle */}
+            <div className="flex items-center justify-between p-4 rounded-lg bg-secondary/50">
+              <Label htmlFor="cb-insights-ai" className="text-sm font-medium cursor-pointer">
+                CB Insights AI Chat
+              </Label>
+              <Switch
+                id="cb-insights-ai"
+                checked={showCBInsightsAI}
+                onCheckedChange={setShowCBInsightsAI}
+              />
+            </div>
+            
+            {/* Conditionally render CB Insights AI */}
+            {showCBInsightsAI && <CBInsightsWidget />}
             
             {/* Debug Panel Toggle */}
             <div className="flex items-center justify-between p-4 rounded-lg bg-secondary/50">
@@ -154,8 +175,6 @@ const Index = () => {
             
             {/* Conditionally render Debug Panel */}
             {showDebugPanel && <CBInsightsDebug />}
-            
-            <TopTrendsList />
           </div>
         </div>
       </main>

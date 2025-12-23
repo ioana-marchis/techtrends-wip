@@ -1,9 +1,19 @@
 /**
  * CBI Top Trends Component
- * Displays top tech trends from CB Insights with auto-refresh
- */
-
-import { useEffect, useState } from "react";
+ * Displays top tech trends from CB Insights with auto-refr  return (
+    <Card className="border-0 shadow-md">
+      <CardHeader className="flex flex-row items-center justify-between pb-3">
+        <div className="flex items-center gap-2">
+          <TrendingUp className="h-5 w-5 text-primary" />
+          <CardTitle className="text-lg font-bold">{CBITopTrendsConfig.title}</CardTitle>
+        </div>
+        <div className="flex items-center gap-2">
+          {CBITopTrendsConfig.showLastUpdate && lastUpdate && (
+            <span className="text-xs text-muted-foreground">
+              {formatTimeAgo()}
+            </span>
+          )}
+          <buttont { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Loader2, TrendingUp, RefreshCw } from "lucide-react";
 import { chatCBI } from "@/lib/cbinsights";
@@ -94,10 +104,10 @@ export default function CBITopTrends() {
       <CardHeader className="flex flex-row items-center justify-between pb-3">
         <div className="flex items-center gap-2">
           <TrendingUp className="h-5 w-5 text-primary" />
-          <CardTitle className="text-lg font-bold">CBI Top Trends</CardTitle>
+          <CardTitle className="text-lg font-bold">{CBITopTrendsConfig.title}</CardTitle>
         </div>
         <div className="flex items-center gap-2">
-          {lastUpdate && (
+          {CBITopTrendsConfig.showLastUpdate && lastUpdate && (
             <span className="text-xs text-muted-foreground">
               {formatLastUpdate()}
             </span>
