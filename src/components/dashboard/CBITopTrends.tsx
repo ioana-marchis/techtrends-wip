@@ -150,7 +150,7 @@ export default function CBITopTrends() {
             {trends.map((trend) => (
               <div
                 key={trend.priority}
-                className="flex items-start gap-3 p-3 rounded-lg border border-border hover:bg-secondary/30 transition-colors group"
+                className="flex items-start gap-3 p-3 rounded-lg border border-border"
               >
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-sm font-bold text-primary">
@@ -158,7 +158,7 @@ export default function CBITopTrends() {
                   </span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                  <p className="text-sm font-medium text-foreground">
                     {trend.name}
                   </p>
                 </div>
