@@ -46,11 +46,11 @@ Click **"New repository secret"** and add these **3 secrets**:
 
 #### Secret 1: CBI_CLIENT_ID
 - **Name:** `CBI_CLIENT_ID`
-- **Value:** `YOUR_CBI_CLIENT_ID`
+- **Value:** Your CB Insights Client ID (get from `.env.local`)
 
 #### Secret 2: CBI_CLIENT_SECRET  
 - **Name:** `CBI_CLIENT_SECRET`
-- **Value:** `YOUR_CBI_CLIENT_SECRET`
+- **Value:** Your CB Insights Client Secret (get from `.env.local`)
 
 #### Secret 3: CBI_TOP_TRENDS_QUERY (Optional)
 - **Name:** `CBI_TOP_TRENDS_QUERY`

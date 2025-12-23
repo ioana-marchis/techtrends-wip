@@ -17,8 +17,8 @@ Click **"New repository secret"** and add:
 
 | Name | Value | Where to find it |
 |------|-------|------------------|
-| `CBI_CLIENT_ID` | `YOUR_CBI_CLIENT_ID` | From your `.env.local` |
-| `CBI_CLIENT_SECRET` | `140a7460...` (full secret) | From your `.env.local` |
+| `CBI_CLIENT_ID` | Your CB Insights Client ID | From your `.env.local` |
+| `CBI_CLIENT_SECRET` | Your CB Insights Client Secret | From your `.env.local` |
 | `CBI_TOP_TRENDS_QUERY` | Optional - uses default if not set | Custom query if desired |
 
 ### 2. Enable Workflow Permissions
