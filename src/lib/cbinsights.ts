@@ -5,6 +5,8 @@
 
 // Use local proxy server to avoid CORS
 const PROXY_BASE = import.meta.env.VITE_PROXY_URL || "http://localhost:3001";
+const IS_PRODUCTION = import.meta.env.PROD;
+const PROXY_AVAILABLE = !IS_PRODUCTION || !!import.meta.env.VITE_PROXY_URL;
 
 interface ChatCBIResponse {
   status: "success" | "error";
@@ -38,6 +40,16 @@ interface ChatCBIResponse {
  */
 export async function chatCBI(question: string): Promise<ChatCBIResponse> {
   console.log("[CBI] Sending question to proxy:", question);
+  
+  // Check if proxy is available
+  if (!PROXY_AVAILABLE) {
+    console.warn("[CBI] Proxy not available in production without VITE_PROXY_URL");
+    return {
+      status: "error",
+      code: 503,
+      msg: "CB Insights integration requires a proxy server. This feature is only available in local development or when deployed with a backend proxy.",
+    };
+  }
   
   try {
     const response = await fetch(`${PROXY_BASE}/api/chatcbi`, {

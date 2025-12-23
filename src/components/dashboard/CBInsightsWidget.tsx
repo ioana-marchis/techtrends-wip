@@ -111,8 +111,19 @@ export default function CBInsightsWidget() {
 
         {/* Error State */}
         {error && (
-          <div className="text-xs text-destructive bg-destructive/10 rounded p-2">
-            {error}
+          <div className="text-xs bg-destructive/10 rounded-lg p-3 space-y-2">
+            <p className="text-destructive font-medium">Unable to connect</p>
+            <p className="text-muted-foreground">
+              {error.includes("proxy server") 
+                ? "CB Insights requires a backend proxy server. This feature is available in local development mode."
+                : error
+              }
+            </p>
+            {error.includes("proxy server") && (
+              <p className="text-[10px] text-muted-foreground italic">
+                To enable: Deploy the proxy server separately and set VITE_PROXY_URL environment variable.
+              </p>
+            )}
           </div>
         )}
 
