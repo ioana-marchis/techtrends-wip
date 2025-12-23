@@ -8,6 +8,8 @@ const cors = require('cors');
 const fetch = require('node-fetch');
 const dotenv = require('dotenv');
 
+// Load .env.local first (for local development), then .env as fallback
+dotenv.config({ path: '.env.local' });
 dotenv.config();
 
 const app = express();

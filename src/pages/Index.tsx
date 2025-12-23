@@ -6,6 +6,7 @@ import TrendCard from "@/components/dashboard/TrendCard";
 import TrendChart from "@/components/dashboard/TrendChart";
 import CategoryPieChart from "@/components/dashboard/CategoryPieChart";
 import TopTrendsList from "@/components/dashboard/TopTrendsList";
+import CBITopTrends from "@/components/dashboard/CBITopTrends";
 import CBInsightsWidget from "@/components/dashboard/CBInsightsWidget";
 import CBInsightsDebug from "@/components/dashboard/CBInsightsDebug";
 import { useHackerNewsTrends } from "@/hooks/useHackerNews";
@@ -136,6 +137,7 @@ const Index = () => {
           
           {/* Sidebar with CB Insights and Top Trending */}
           <div className="space-y-6">
+            <CBITopTrends />
             <CBInsightsWidget />
             
             {/* Debug Panel Toggle */}
