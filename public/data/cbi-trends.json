@@ -1,0 +1,48 @@
+{
+  "lastUpdate": "2025-12-23T12:44:12.336Z",
+  "query": "Get an ordered list of the latest top tech trends from the World Economic forum. Show the output in the format: <output>trend priority. name of the trend</output>. Do not display any other characters in the response, not even citations.",
+  "trends": [
+    {
+      "priority": 1,
+      "name": "Test - Structural Battery Composites"
+    },
+    {
+      "priority": 2,
+      "name": "Test - Osmotic Power Systems"
+    },
+    {
+      "priority": 3,
+      "name": "Test - Advanced Nuclear Technologies"
+    },
+    {
+      "priority": 4,
+      "name": "Engineered Living Therapeutics"
+    },
+    {
+      "priority": 5,
+      "name": "Test - GLP-1s for Neurodegenerative Disease"
+    },
+    {
+      "priority": 6,
+      "name": "Test - Autonomous Biochemical Sensing"
+    },
+    {
+      "priority": 7,
+      "name": "Test - Green Nitrogen Fixation"
+    },
+    {
+      "priority": 8,
+      "name": "Test - Nanozymes"
+    },
+    {
+      "priority": 9,
+      "name": "Test - Collaborative Sensing"
+    },
+    {
+      "priority": 10,
+      "name": "Test - Generative Watermarking"
+    }
+  ],
+  "rawResponse": "1. Test - Structural Battery Composites\n2. Test - Osmotic Power Systems\n3. Test - Advanced Nuclear Technologies\n4. Test - Engineered Living Therapeutics\n5. Test - GLP-1s for Neurodegenerative Disease\n6. Test - Autonomous Biochemical Sensing\n7. Test - Green Nitrogen Fixation\n8. Test - Nanozymes\n9. Test - Collaborative Sensing\n10. Test - Generative Watermarking",
+  "sources": []
+}

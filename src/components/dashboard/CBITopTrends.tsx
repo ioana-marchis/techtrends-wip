@@ -1,21 +1,10 @@
 /**
  * CBI Top Trends Component
- * Displays top tech trends from CB Insights with auto-refr  return (
-    <Card className="border-0 shadow-md">
-      <CardHeader className="flex flex-row items-center justify-between pb-3">
-        <div className="flex items-center gap-2">
-          <TrendingUp className="h-5 w-5 text-primary" />
-          <CardTitle className="text-lg font-bold">{CBITopTrendsConfig.title}</CardTitle>
-        </div>
-        <div className="flex items-center gap-2">
-          {CBITopTrendsConfig.showLastUpdate && lastUpdate && (
-            <span className="text-xs text-muted-foreground">
-              {formatTimeAgo()}
-            </span>
-          )}
-          <buttont { useEffect, useState } from "react";
+ * Displays top tech trends from CB Insights with auto-refresh
+ */
+import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Loader2, TrendingUp, RefreshCw } from "lucide-react";
+import { Loader2, TrendingUp } from "lucide-react";
 import { chatCBI } from "@/lib/cbinsights";
 import { CBITopTrendsConfig } from "@/config/cbiTopTrends";
 
@@ -54,18 +43,37 @@ export default function CBITopTrends() {
 
     try {
       console.log('[CBI Top Trends] Fetching trends...');
-      const response = await chatCBI(CBITopTrendsConfig.query);
+      
+      // Try to fetch from local proxy first (for development)
+      try {
+        const response = await chatCBI(CBITopTrendsConfig.query);
 
-      if (response.status === 'success' && response.answer) {
-        const parsedTrends = parseTrends(response.answer);
+        if (response.status === 'success' && response.answer) {
+          const parsedTrends = parseTrends(response.answer);
+          const limited = CBITopTrendsConfig.maxTrends 
+            ? parsedTrends.slice(0, CBITopTrendsConfig.maxTrends)
+            : parsedTrends;
+          setTrends(limited);
+          setLastUpdate(new Date());
+          console.log('[CBI Top Trends] Fetched', limited.length, 'trends from proxy');
+          return;
+        }
+      } catch (proxyErr) {
+        console.log('[CBI Top Trends] Proxy unavailable, trying static data...');
+      }
+
+      // Fallback to static JSON data (for production/GitHub Pages)
+      const staticResponse = await fetch('/techtrends-wip/data/cbi-trends.json');
+      if (staticResponse.ok) {
+        const data = await staticResponse.json();
         const limited = CBITopTrendsConfig.maxTrends 
-          ? parsedTrends.slice(0, CBITopTrendsConfig.maxTrends)
-          : parsedTrends;
+          ? data.trends.slice(0, CBITopTrendsConfig.maxTrends)
+          : data.trends;
         setTrends(limited);
-        setLastUpdate(new Date());
-        console.log('[CBI Top Trends] Fetched', limited.length, 'trends');
+        setLastUpdate(new Date(data.lastUpdate));
+        console.log('[CBI Top Trends] Loaded', limited.length, 'trends from static data');
       } else {
-        setError(response.msg || 'Failed to fetch trends');
+        setError('Unable to load trends data');
       }
     } catch (err) {
       console.error('[CBI Top Trends] Error:', err);
@@ -106,21 +114,11 @@ export default function CBITopTrends() {
           <TrendingUp className="h-5 w-5 text-primary" />
           <CardTitle className="text-lg font-bold">{CBITopTrendsConfig.title}</CardTitle>
         </div>
-        <div className="flex items-center gap-2">
-          {CBITopTrendsConfig.showLastUpdate && lastUpdate && (
-            <span className="text-xs text-muted-foreground">
-              {formatLastUpdate()}
-            </span>
-          )}
-          <button
-            onClick={fetchTrends}
-            disabled={isLoading}
-            className="h-6 w-6 flex items-center justify-center rounded hover:bg-secondary/50 transition-colors disabled:opacity-50"
-            title="Refresh trends"
-          >
-            <RefreshCw className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
-          </button>
-        </div>
+        {CBITopTrendsConfig.showLastUpdate && lastUpdate && (
+          <span className="text-xs text-muted-foreground">
+            {formatLastUpdate()}
+          </span>
+        )}
       </CardHeader>
       <CardContent className="space-y-3">
         {/* Loading State */}

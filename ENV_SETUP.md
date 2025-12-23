@@ -35,6 +35,7 @@ This document explains how to set up environment variables for local development
 |----------|-------------|
 | `VITE_CBI_CLIENT_ID` | CB Insights Client ID (frontend, if needed) |
 | `VITE_CBI_CLIENT_SECRET` | CB Insights Client Secret (frontend, if needed) |
+| `VITE_CBI_TOP_TRENDS_QUERY` | Custom query for CBI Top Trends component |
 
 ## Files
 

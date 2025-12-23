@@ -11,6 +11,12 @@ export const CBITopTrendsConfig = {
   /**
    * Query sent to CB Insights API
    * 
+   * This query is now loaded from the environment variable:
+   * VITE_CBI_TOP_TRENDS_QUERY
+   * 
+   * To customize the query, edit .env.local and set:
+   * VITE_CBI_TOP_TRENDS_QUERY="Your custom query here..."
+   * 
    * Tips for customizing:
    * - Change "World Economic forum" to any other source
    * - Modify the output format as needed
@@ -21,7 +27,8 @@ export const CBITopTrendsConfig = {
    * - "Get emerging technologies from McKinsey..."
    * - "Get cybersecurity trends from NIST..."
    */
-  query: 'Get an ordered list of the latest top tech trends from the World Economic forum. Show the output in the format: <output>trend priority. name of the trend</output>. Do not display any other characters in the response, not even citations.',
+  query: import.meta.env.VITE_CBI_TOP_TRENDS_QUERY || 
+         'Get an ordered list of the latest top tech trends from the World Economic forum. Show the output in the format: <output>trend priority. name of the trend</output>. Do not display any other characters in the response, not even citations.',
   
   /**
    * Refresh interval in milliseconds

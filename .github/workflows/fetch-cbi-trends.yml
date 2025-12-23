@@ -1,0 +1,50 @@
+name: Fetch CBI Top Trends
+
+on:
+  # Run every hour
+  schedule:
+    - cron: '0 * * * *'  # At minute 0 of every hour
+  
+  # Allow manual trigger
+  workflow_dispatch:
+  
+  # Run on push to main (for testing)
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/fetch-cbi-trends.yml'
+      - 'scripts/fetch-cbi-trends.cjs'
+
+jobs:
+  fetch-trends:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write  # Allow writing to repository
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm install node-fetch dotenv
+      
+      - name: Fetch CBI Top Trends
+        env:
+          CBI_CLIENT_ID: ${{ secrets.CBI_CLIENT_ID }}
+          CBI_CLIENT_SECRET: ${{ secrets.CBI_CLIENT_SECRET }}
+          CBI_TOP_TRENDS_QUERY: ${{ secrets.CBI_TOP_TRENDS_QUERY }}
+        run: node scripts/fetch-cbi-trends.cjs
+      
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add public/data/cbi-trends.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update CBI Top Trends data [automated]" && git push)
