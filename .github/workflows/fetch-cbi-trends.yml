@@ -1,9 +1,9 @@
 name: Fetch CBI Top Trends
 
 on:
-  # Run every hour
+  # Run once a day at midnight UTC
   schedule:
-    - cron: '0 * * * *'  # At minute 0 of every hour
+    - cron: '0 0 * * *'  # At 00:00 UTC every day
   
   # Allow manual trigger
   workflow_dispatch:
