@@ -1,48 +1,48 @@
 {
-  "lastUpdate": "2026-01-15T08:06:29.513Z",
+  "lastUpdate": "2026-01-16T08:06:18.284Z",
   "query": " Get an ordered list of the latest top tech trends from the World Economic forum. Show the output in the format: <output>trend priority. name of the trend</output>. Do not display any other characters in the response, not even citations.",
   "trends": [
     {
       "priority": 1,
-      "name": "Structural Battery Composites"
+      "name": "Artificial Intelligence"
     },
     {
       "priority": 2,
-      "name": "Osmotic Power Systems"
+      "name": "Energy Transition"
     },
     {
       "priority": 3,
-      "name": "Advanced Nuclear Technologies"
+      "name": "Health and Healthcare Systems"
     },
     {
       "priority": 4,
-      "name": "Engineered Living Therapeutics"
+      "name": "Emerging Technologies"
     },
     {
       "priority": 5,
-      "name": "GLP-1s for Neurodegenerative Disease"
+      "name": "Technological Innovation"
     },
     {
       "priority": 6,
-      "name": "Autonomous Biochemical Sensing"
+      "name": "Economic Growth"
     },
     {
       "priority": 7,
-      "name": "Green Nitrogen Fixation"
+      "name": "Business Innovation"
     },
     {
       "priority": 8,
-      "name": "Nanozymes"
+      "name": "Supply Chains and Transportation"
     },
     {
       "priority": 9,
-      "name": "Collaborative Sensing"
+      "name": "Global Risks Management"
     },
     {
       "priority": 10,
-      "name": "Generative Watermarking"
+      "name": "Civil Society and Workforce Development"
     }
   ],
-  "rawResponse": "1. Structural Battery Composites\n2. Osmotic Power Systems\n3. Advanced Nuclear Technologies\n4. Engineered Living Therapeutics\n5. GLP-1s for Neurodegenerative Disease\n6. Autonomous Biochemical Sensing\n7. Green Nitrogen Fixation\n8. Nanozymes\n9. Collaborative Sensing\n10. Generative Watermarking",
+  "rawResponse": "1. Artificial Intelligence\n2. Energy Transition\n3. Health and Healthcare Systems\n4. Emerging Technologies\n5. Technological Innovation\n6. Economic Growth\n7. Business Innovation\n8. Supply Chains and Transportation\n9. Global Risks Management\n10. Civil Society and Workforce Development",
   "sources": []
 }
