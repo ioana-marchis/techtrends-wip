@@ -1,48 +1,96 @@
 {
-  "lastUpdate": "2026-01-19T08:06:52.512Z",
+  "lastUpdate": "2026-01-20T08:07:08.957Z",
   "query": " Get an ordered list of the latest top tech trends from the World Economic forum. Show the output in the format: <output>trend priority. name of the trend</output>. Do not display any other characters in the response, not even citations.",
   "trends": [
     {
       "priority": 1,
-      "name": "Structural Battery Composites"
+      "name": "Artificial Intelligence"
     },
     {
       "priority": 2,
-      "name": "Osmotic Power Systems"
+      "name": "5G and Intelligent Economy"
     },
     {
       "priority": 3,
-      "name": "Advanced Nuclear Technologies"
+      "name": "Space Governance"
     },
     {
       "priority": 4,
-      "name": "Engineered Living Therapeutics"
+      "name": "Banks and Blockchains"
     },
     {
       "priority": 5,
-      "name": "GLP-1s for Neurodegenerative Disease"
+      "name": "Industrial AI for Disaster Response"
     },
     {
       "priority": 6,
-      "name": "Autonomous Biochemical Sensing"
+      "name": "Trustworthy AI"
     },
     {
       "priority": 7,
-      "name": "Green Nitrogen Fixation"
+      "name": "AI Redefining Work"
     },
     {
       "priority": 8,
-      "name": "Nanozymes"
+      "name": "Capital Markets Scaling"
     },
     {
       "priority": 9,
-      "name": "Collaborative Sensing"
+      "name": "Physical AI for Supply Chains"
     },
     {
       "priority": 10,
-      "name": "Generative Watermarking"
+      "name": "Physical AI and Self-Driving Cars"
+    },
+    {
+      "priority": 11,
+      "name": "AI Supercycle"
+    },
+    {
+      "priority": 12,
+      "name": "AI and Leadership"
+    },
+    {
+      "priority": 13,
+      "name": "Critical Minerals Innovation"
+    },
+    {
+      "priority": 14,
+      "name": "AI Governance"
+    },
+    {
+      "priority": 15,
+      "name": "Social Robots Ethics"
+    },
+    {
+      "priority": 16,
+      "name": "Energy Security"
+    },
+    {
+      "priority": 17,
+      "name": "Clean Fuels"
+    },
+    {
+      "priority": 18,
+      "name": "AI Digital Infrastructure"
+    },
+    {
+      "priority": 19,
+      "name": "Digital Health Intelligence"
+    },
+    {
+      "priority": 20,
+      "name": "AI Agents"
+    },
+    {
+      "priority": 21,
+      "name": "5G Networks"
+    },
+    {
+      "priority": 22,
+      "name": "Energy Transition"
     }
   ],
-  "rawResponse": "1. Structural Battery Composites\n2. Osmotic Power Systems\n3. Advanced Nuclear Technologies\n4. Engineered Living Therapeutics\n5. GLP-1s for Neurodegenerative Disease\n6. Autonomous Biochemical Sensing\n7. Green Nitrogen Fixation\n8. Nanozymes\n9. Collaborative Sensing\n10. Generative Watermarking",
+  "rawResponse": "1. Artificial Intelligence\n2. 5G and Intelligent Economy\n3. Space Governance\n4. Banks and Blockchains\n5. Industrial AI for Disaster Response\n6. Trustworthy AI\n7. AI Redefining Work\n8. Capital Markets Scaling\n9. Physical AI for Supply Chains\n10. Physical AI and Self-Driving Cars\n11. AI Supercycle\n12. AI and Leadership\n13. Critical Minerals Innovation\n14. AI Governance\n15. Social Robots Ethics\n16. Energy Security\n17. Clean Fuels\n18. AI Digital Infrastructure\n19. Digital Health Intelligence\n20. AI Agents\n21. 5G Networks\n22. Energy Transition",
   "sources": []
 }
