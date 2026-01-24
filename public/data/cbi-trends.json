@@ -1,48 +1,7 @@
 {
-  "lastUpdate": "2026-01-23T08:06:16.657Z",
+  "lastUpdate": "2026-01-24T08:05:52.669Z",
   "query": " Get an ordered list of the latest top tech trends from the World Economic forum. Show the output in the format: <output>trend priority. name of the trend</output>. Do not display any other characters in the response, not even citations.",
-  "trends": [
-    {
-      "priority": 1,
-      "name": "AI agents tackling specialized financial workflows"
-    },
-    {
-      "priority": 2,
-      "name": "AI automating enterprise finance operations"
-    },
-    {
-      "priority": 3,
-      "name": "Physical AI and robotics gaining commercial momentum"
-    },
-    {
-      "priority": 4,
-      "name": "Crypto payments infrastructure enabling institutional finance"
-    },
-    {
-      "priority": 5,
-      "name": "Venture funding concentration in foundation model AI companies"
-    },
-    {
-      "priority": 6,
-      "name": "Multimodal AI rising in enterprise adoption"
-    },
-    {
-      "priority": 7,
-      "name": "Quantum computing advancing toward commercialization"
-    },
-    {
-      "priority": 8,
-      "name": "Agentic commerce and autonomous payments emerging"
-    },
-    {
-      "priority": 9,
-      "name": "Digital asset tokenization for traditional institutions"
-    },
-    {
-      "priority": 10,
-      "name": "AI-powered security and fraud detection"
-    }
-  ],
-  "rawResponse": "I can see references to the World Economic Forum's Top 10 Emerging Technologies of 2025 in the materials, but the actual list of the 10 technologies isn't included in the content available to me — only the methodology for how they were selected.\n\nHowever, I can provide you with the top tech trends from CB Insights data for 2025, which include:\n\n1. AI agents tackling specialized financial workflows\n2. AI automating enterprise finance operations\n3. Physical AI and robotics gaining commercial momentum\n4. Crypto payments infrastructure enabling institutional finance\n5. Venture funding concentration in foundation model AI companies\n6. Multimodal AI rising in enterprise adoption\n7. Quantum computing advancing toward commercialization\n8. Agentic commerce and autonomous payments emerging\n9. Digital asset tokenization for traditional institutions\n10. AI-powered security and fraud detection\n\nWould you like me to dive deeper into any of these trends, or would you prefer I search for the specific WEF list you're looking for?",
+  "trends": [],
+  "rawResponse": "I found a reference to the World Economic Forum's \"Top 10 Emerging Technologies of 2025,\" but the actual list content isn't available in the sources I can access. The page exists but the specific trends aren't loaded in the data provided to me.\n\nI can't create an ordered list in the format you requested without the actual WEF data, as that would require me to fabricate information.\n\nHowever, I can help you explore emerging tech trends from CB Insights research if you're interested. We track technology trends across AI, quantum computing, fintech, digital health, and other major sectors with detailed analysis and data. Would that be helpful?",
   "sources": []
 }
