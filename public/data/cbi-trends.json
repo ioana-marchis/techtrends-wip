@@ -1,48 +1,7 @@
 {
-  "lastUpdate": "2026-01-25T08:05:51.909Z",
+  "lastUpdate": "2026-01-26T08:07:22.996Z",
   "query": " Get an ordered list of the latest top tech trends from the World Economic forum. Show the output in the format: <output>trend priority. name of the trend</output>. Do not display any other characters in the response, not even citations.",
-  "trends": [
-    {
-      "priority": 1,
-      "name": "Structural Battery Composites"
-    },
-    {
-      "priority": 2,
-      "name": "Osmotic Power Systems"
-    },
-    {
-      "priority": 3,
-      "name": "Advanced Nuclear Technologies"
-    },
-    {
-      "priority": 4,
-      "name": "Engineered Living Therapeutics"
-    },
-    {
-      "priority": 5,
-      "name": "GLP-1s for Neurodegenerative Disease"
-    },
-    {
-      "priority": 6,
-      "name": "Autonomous Biochemical Sensing"
-    },
-    {
-      "priority": 7,
-      "name": "Green Nitrogen Fixation"
-    },
-    {
-      "priority": 8,
-      "name": "Nanozymes"
-    },
-    {
-      "priority": 9,
-      "name": "Collaborative Sensing"
-    },
-    {
-      "priority": 10,
-      "name": "Generative Watermarking"
-    }
-  ],
-  "rawResponse": "1. Structural Battery Composites\n2. Osmotic Power Systems\n3. Advanced Nuclear Technologies\n4. Engineered Living Therapeutics\n5. GLP-1s for Neurodegenerative Disease\n6. Autonomous Biochemical Sensing\n7. Green Nitrogen Fixation\n8. Nanozymes\n9. Collaborative Sensing\n10. Generative Watermarking",
+  "trends": [],
+  "rawResponse": "The World Economic Forum published their Top 10 Emerging Technologies of 2025 report on June 24, 2025, but the specific list of the 10 technologies is not available in the materials I have access to. The report highlights innovations with potential to reshape industries and societies within the next three to five years, but the individual technology names and rankings are not provided in the source content.",
   "sources": []
 }
