@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-01-28T08:06:39.493Z",
+  "lastUpdate": "2026-01-29T08:11:05.905Z",
   "query": " Get an ordered list of the latest top tech trends from the World Economic forum. Show the output in the format: <output>trend priority. name of the trend</output>. Do not display any other characters in the response, not even citations.",
   "trends": [
     {
