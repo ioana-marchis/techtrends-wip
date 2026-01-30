@@ -1,48 +1,7 @@
 {
-  "lastUpdate": "2026-01-29T08:11:05.905Z",
+  "lastUpdate": "2026-01-30T08:11:21.165Z",
   "query": " Get an ordered list of the latest top tech trends from the World Economic forum. Show the output in the format: <output>trend priority. name of the trend</output>. Do not display any other characters in the response, not even citations.",
-  "trends": [
-    {
-      "priority": 1,
-      "name": "Structural Battery Composites"
-    },
-    {
-      "priority": 2,
-      "name": "Osmotic Power Systems"
-    },
-    {
-      "priority": 3,
-      "name": "Advanced Nuclear Technologies"
-    },
-    {
-      "priority": 4,
-      "name": "Engineered Living Therapeutics"
-    },
-    {
-      "priority": 5,
-      "name": "GLP-1s for Neurodegenerative Disease"
-    },
-    {
-      "priority": 6,
-      "name": "Autonomous Biochemical Sensing"
-    },
-    {
-      "priority": 7,
-      "name": "Green Nitrogen Fixation"
-    },
-    {
-      "priority": 8,
-      "name": "Nanozymes"
-    },
-    {
-      "priority": 9,
-      "name": "Collaborative Sensing"
-    },
-    {
-      "priority": 10,
-      "name": "Generative Watermarking"
-    }
-  ],
-  "rawResponse": "1. Structural Battery Composites\n2. Osmotic Power Systems\n3. Advanced Nuclear Technologies\n4. Engineered Living Therapeutics\n5. GLP-1s for Neurodegenerative Disease\n6. Autonomous Biochemical Sensing\n7. Green Nitrogen Fixation\n8. Nanozymes\n9. Collaborative Sensing\n10. Generative Watermarking",
+  "trends": [],
+  "rawResponse": "I don't have access to the World Economic Forum's ordered list of top tech trends in the provided sources. The external content references WEF articles but doesn't contain the specific ranked list you're requesting.\n\nI can help you with tech trends from CB Insights research instead, or if you have access to the specific WEF report, I can analyze that content for you.",
   "sources": []
 }
