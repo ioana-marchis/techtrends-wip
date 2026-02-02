@@ -1,7 +1,7 @@
 {
-  "lastUpdate": "2026-02-01T08:07:49.678Z",
+  "lastUpdate": "2026-02-02T08:14:18.847Z",
   "query": " Get an ordered list of the latest top tech trends from the World Economic forum. Show the output in the format: <output>trend priority. name of the trend</output>. Do not display any other characters in the response, not even citations.",
   "trends": [],
-  "rawResponse": "I don't have access to a clearly ordered priority list of top tech trends from the World Economic Forum in the available sources. The external content references a \"Top 10 Emerging Technologies of 2025\" report, but the actual numbered list is not included in the retrieved data.\n\nThe Global Cybersecurity Outlook 2026 discusses several technology trends including AI in cybersecurity, geopolitical impacts on cyber strategy, and AI agents, but these are not presented in a numbered priority format.\n\nTo get the specific ordered list you're looking for, you would need to access the full World Economic Forum \"Top 10 Emerging Technologies of 2025\" report directly.",
+  "rawResponse": "I don't have access to the detailed list of World Economic Forum's latest top tech trends in the provided materials. The external content references a \"Top 10 Emerging Technologies of 2025\" report from WEF, but the actual trend list isn't included in the data available to me.\n\nI can help you with:\n- Analysis of tech trends from CB Insights research, including AI market maps, fintech trends, and digital health innovations\n- Emerging technology market data and company profiles\n- Investment trends and funding patterns across tech sectors\n\nWould you like me to provide insights on any of these areas instead?",
   "sources": []
 }
