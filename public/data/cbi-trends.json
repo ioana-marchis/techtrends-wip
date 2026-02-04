@@ -1,7 +1,7 @@
 {
-  "lastUpdate": "2026-02-03T08:12:10.877Z",
+  "lastUpdate": "2026-02-04T08:12:43.697Z",
   "query": " Get an ordered list of the latest top tech trends from the World Economic forum. Show the output in the format: <output>trend priority. name of the trend</output>. Do not display any other characters in the response, not even citations.",
   "trends": [],
-  "rawResponse": "I don't have access to the complete content from the World Economic Forum's Top 10 Emerging Technologies list. The external data shows they have published \"Top 10 Emerging Technologies of 2025,\" but the specific ordered list isn't available in the information I can access.\n\nHowever, I can provide you with CB Insights' latest tech trends from our Tech Trends 2026 report, which identifies 14 emerging trends. Would you like me to present those instead?",
+  "rawResponse": "I don't have access to the actual list of top tech trends from the World Economic Forum in the provided content. While there's a reference to \"Top 10 Emerging Technologies of 2025\" from WEF, the specific trends themselves aren't included in the data I can access.\n\nTo get this information in your requested format, I'd need the actual WEF report content that lists out their top emerging technologies with their priorities and names.",
   "sources": []
 }
